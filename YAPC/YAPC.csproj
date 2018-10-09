@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Release\YAPC.exe.config" />
   </ItemGroup>
   <ItemGroup>
     <COMReference Include="WindowsInstaller">
@@ -70,6 +71,20 @@
     <PackageReference Include="Microsoft.Management.Infrastructure">
       <Version>1.0.0</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Release\Microsoft.Deployment.Compression.Cab.dll" />
+    <Content Include="bin\Release\Microsoft.Deployment.Compression.Cab.xml" />
+    <Content Include="bin\Release\Microsoft.Deployment.Compression.dll" />
+    <Content Include="bin\Release\Microsoft.Deployment.Compression.xml" />
+    <Content Include="bin\Release\Microsoft.Deployment.WindowsInstaller.dll" />
+    <Content Include="bin\Release\Microsoft.Deployment.WindowsInstaller.Linq.dll" />
+    <Content Include="bin\Release\Microsoft.Deployment.WindowsInstaller.Linq.xml" />
+    <Content Include="bin\Release\Microsoft.Deployment.WindowsInstaller.Package.dll" />
+    <Content Include="bin\Release\Microsoft.Deployment.WindowsInstaller.Package.xml" />
+    <Content Include="bin\Release\Microsoft.Deployment.WindowsInstaller.xml" />
+    <Content Include="bin\Release\YAPC.exe" />
+    <Content Include="bin\Release\YAPC.pdb" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
