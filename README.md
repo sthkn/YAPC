@@ -1,6 +1,6 @@
 # YAPC - Yet Another Patch Cleaner
 YAPC can clean orphaned .msi/.msp files from the local computer, or remotely on the network.
-
+> It is not recommended to delete anything from C:/Windows/Installer, but this does. The files are listed for review before deleting/moving.
 
 ## How To Use
 1. Clone/Download the repository to your machine. (Extract the zip folder)
