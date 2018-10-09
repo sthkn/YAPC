@@ -2,9 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Management.Infrastructure;
 using Microsoft.Win32;
 
 namespace YAPC
@@ -13,10 +10,8 @@ namespace YAPC
 	{
 		private static string _computerName;
 		private List<Registry_PatchCodeModel> _nonAppliedPatchCodes = new List<Registry_PatchCodeModel>();
-		private List<string> _filesToKeep = new List<string>();
 		private List<string> _appliedPatches = new List<string>();
 		private List<FileToDeleteModel> _filesToDelete = new List<FileToDeleteModel>();
-		private RegistryKey _patchRegistryKey;
 
 		public YAPCPatchManager(string computerName)
 		{
@@ -78,9 +73,9 @@ namespace YAPC
 				}
 				else
 				{
-					RegistryKey rKeyPCode = rKeyPatches.OpenSubKey(pCode);
-					string newLocation = rKeyPCode.GetValue("LocalPackage").ToString().Replace("C:\\", $@"\\{_computerName}\C$\");
-					_filesToKeep.Add(newLocation);
+					//don't think we need to do anything here?
+					//RegistryKey rKeyPCode = rKeyPatches.OpenSubKey(pCode);
+					//string newLocation = rKeyPCode.GetValue("LocalPackage").ToString().Replace("C:\\", $@"\\{_computerName}\C$\");
 				}
 			}
 		}
@@ -105,7 +100,6 @@ namespace YAPC
 			}
 			foreach (FileToDeleteModel fileM in _filesToDelete)
 			{
-				FileInfo fi = new FileInfo(fileM.FullPath);
 				if (File.Exists(fileM.FullPath))
 				{
 					File.SetAttributes(fileM.FullPath, FileAttributes.Normal);
