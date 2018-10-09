@@ -14,6 +14,7 @@ YAPC can clean orphaned .msi/.msp files from the local computer, or remotely on 
 	* You can safely move the files to a separate backup location and restore them if the need arises.
 
 
-## Why tho?
+## ![alt text](https://i.imgur.com/73SL1o7.jpg)
+
 1. Many computers have multiple drives. Installing Windows on the C: drive, and subsequentally patching the system, will cause the C: drive to fill up over time from orphaned patch files.
 2. YAPC keeps the Windows Installer directory small, so that C: can hold more stuff and things.
