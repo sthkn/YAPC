@@ -7,7 +7,7 @@ namespace YAPC
 {
 	public class Program
 	{
-		private static string _testComputer = "ECN-Icarus.testad.purdue.edu";
+		private static string _testComputer = string.Empty;
 		private static string _domain = "testad";
 		public static void Main(string[] args)
 		{
